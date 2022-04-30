@@ -28,3 +28,29 @@
 # """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 # 10주차 2628 종이자르기
 # """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+# import sys
+#
+# max_height = 0
+# max_width = 0
+# w, h = map(int, sys.stdin.readline().split())
+# t = int(sys.stdin.readline())
+# cut_hor = [0,h]
+# cut_len = [0,w]
+#
+# for i in range(t):
+#     c, n = map(int, sys.stdin.readline().split())
+#     if c == 0:
+#         cut_hor.append(n)
+#     elif c == 1:
+#         cut_len.append(n)
+#
+# cut_hor = sorted(cut_hor)
+# cut_len = sorted(cut_len)
+#
+# for j in range(len(cut_hor)-1):
+#     max_height = max(cut_hor[j+1]-cut_hor[j], max_height)
+#
+# for k in range(len(cut_len)-1):
+#     max_width = max(cut_len[k+1]-cut_len[k], max_width)
+#
+# print(f"{max_height*max_width}")
