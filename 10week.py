@@ -2,13 +2,12 @@
 # 10주차 6986 절사평균
 # """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 # import sys
-# from decimal import Decimal
 #
 # N, K = map(int, sys.stdin.readline().split())
 # score = []
 #
 # for i in range(N):
-#     score.append(float(Decimal(sys.stdin.readline())))
+#     score.append(float(sys.stdin.readline())+5e-16)
 #
 # sort_score = sorted(score)
 #
@@ -54,3 +53,8 @@
 #     max_width = max(cut_len[k+1]-cut_len[k], max_width)
 #
 # print(f"{max_height*max_width}")
+
+
+# """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+# 10주차 2303 숫자 게임
+# """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
