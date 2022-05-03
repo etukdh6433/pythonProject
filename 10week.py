@@ -58,3 +58,20 @@
 # """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 # 10주차 2303 숫자 게임
 # """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+# import sys
+#
+# t = int(sys.stdin.readline())
+# score = [0 for i in range(t)]
+#
+# for i in range(t):
+#     card = list(map(int, sys.stdin.readline().split()))
+#
+#     for j in range(3):
+#         for k in range(j+1,4):
+#             for l in range(k+1,5):
+#                 score[i] = max(score[i], (card[j]+card[k]+card[l])%10)
+#
+# for i in range(len(score)-1,-1,-1):
+#     if score[i] == max(score):
+#         print(f"{i+1}")
+#         break
