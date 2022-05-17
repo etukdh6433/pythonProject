@@ -52,3 +52,26 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 12주차 2512 예산
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+# import sys
+#
+# n = int(sys.stdin.readline())
+# lo = list(map(int, sys.stdin.readline().split()))
+# lo.sort()
+# m = int(sys.stdin.readline())
+# lo_an = [0 for i in range(n)]
+#
+# if sum(lo) <= m:
+#     lo_an = lo
+#     print(max(lo_an))
+# else:
+#     for i in range(n):
+#         x = lo_an.count(0)
+#         y = m - sum(lo_an)
+#         if y//x >= lo[i]:
+#             lo_an[i] = lo[i]
+#         else:
+#             for j in range(i,n):
+#                 lo_an[j] = y//x
+#             break
+#
+#     print(f"{max(lo_an)}")
