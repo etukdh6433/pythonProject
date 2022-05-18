@@ -32,21 +32,26 @@
 #
 # k = int(sys.stdin.readline())
 # c = int(sys.stdin.readline())
-# l = []
+# lc = []
 #
 # for i in range(c):
-#     l.append(list(map(int, sys.stdin.readline().split())))
+#     lc.append(list(map(int, sys.stdin.readline().split())))
 #     m, n = 0, 0
 #     for j in range(k):
 #         r = k - j - 1
-#         if m != l[i][0]: m += 1
-#         if m + r < n: break
-#         if n != l[i][1]: n += 1
-#         if n + r < m: break
-#     if l[i] == [m,n]:
+#         if m != lc[i][0]:
+#             m += 1
+#         if m + r < n:
+#             break
+#         if n != lc[i][1]:
+#             n += 1
+#         if n + r < m:
+#             break
+#     if lc[i] == [m, n]:
 #         print(1)
 #     else:
 #         print(0)
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
