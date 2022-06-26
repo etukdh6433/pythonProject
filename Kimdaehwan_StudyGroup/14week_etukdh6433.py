@@ -25,50 +25,36 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 # import sys
 #
-# n = int(sys.stdin.readline())
-# roof = dict()
-#
-# for i in range(n):
+# msize = 1002
+# t = int(sys.stdin.readline())
+# nl = [0 for i in range(msize)]
+# for i in range(t):
 #     a, b = map(int, sys.stdin.readline().split())
-#     roof[a] = b
+#     nl[a] = b
 #
-# roof = dict(sorted(roof.items()))
-# key = list(roof.keys())
-# value = list(roof.values())
+# s = 1
+# e = 1001
+# s_val = 0
+# e_val = 0
+# mvalue_index = nl.index(max(nl))
 #
-# max_value_index = value.index(max(value))
-# s, e = max_value_index, max_value_index
+# while s != mvalue_index or e != mvalue_index:
+#     if s != mvalue_index:
+#         if s_val != 0 and s_val > nl[s]:
+#             nl[s] = s_val
+#             s += 1
+#         elif s_val <= nl[s]:
+#             s_val = nl[s]
+#             s += 1
+#     if e != mvalue_index:
+#         if e_val != 0 and e_val > nl[e]:
+#             nl[e] = e_val
+#             e -= 1
+#         elif e_val <= nl[e]:
+#             e_val = nl[e]
+#             e -= 1
 #
-# while s != 0 or e != n-1:
-#     if s != 0 and value[s] < value[s-1]:
-#         del roof[key[s]]
-#         s -= 1
-#     elif s != 0:
-#         s -= 1
-#
-#     if e != n-1 and value[e] < value[e+1]:
-#         del roof[key[e]]
-#         e += 1
-#     elif e != n-1:
-#         e += 1
-#
-# key = list(roof.keys())
-# value = list(roof.values())
-# m = len(key)
-# max_value_index = value.index(max(value))
-# s, e = max_value_index, max_value_index
-# o = max(value)
-#
-# while s != 0 or e != m-1:
-#     if s != 0 and value[s] >= value[s - 1]:
-#         o += value[s - 1] * (key[s] - key[s - 1])
-#         s -= 1
-#
-#     if e != m - 1 and value[e] >= value[e + 1]:
-#         o += value[e + 1] * (key[e + 1] - key[e])
-#         e += 1
-#
-# print(f"{o}")
+# print(f"{sum(nl)}")
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
