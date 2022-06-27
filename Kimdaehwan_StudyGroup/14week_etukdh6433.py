@@ -58,7 +58,7 @@
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-14주차 2641 다각형그리기 (오답)
+14주차 2641 다각형그리기
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 # import sys
 #
@@ -85,11 +85,11 @@
 # for i in range(t):
 #     ll = list(map(int, sys.stdin.readline().split()))
 #     for j in range(size):
-#         if ll == nl[j:j+10]:
+#         if ll == nl[j:j+size]:
 #             cnt += 1
 #             cor.append(ll)
 #             break
-#         elif ll == ml[j:j+10]:
+#         elif ll == ml[j:j+size]:
 #             cnt += 1
 #             cor.append(ll)
 #             break
