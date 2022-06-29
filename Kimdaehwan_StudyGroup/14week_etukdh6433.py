@@ -96,6 +96,4 @@
 #
 # print(f"{cnt}")
 # for i in cor:
-#     for j in i:
-#         print(j, end=" ")
-#     print()
+#     print(*i)
