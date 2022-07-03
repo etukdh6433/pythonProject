@@ -1,4 +1,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+17주차 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 17주차 2206 벽 부수고 이동하기 (시간초과)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 import sys
@@ -21,15 +24,15 @@ def find(arr):
         for k in range(4):
             nr = t[0] + dr[k]
             nc = t[1] + dc[k]
-            if (nr >= 0) and (nr < r) and (nc >= 0) and (nc < c):
-                if dist[nr][nc] > dist[t[0]][t[1]] + 1 and arr[nr][nc] == 0:
+            if (nr >= 0) and (nr < r) and (nc >= 0) and (nc < c) and (dist[nr][nc] > dist[t[0]][t[1]] + 1):
+                if arr[nr][nc] == 0:
                     dist[nr][nc] = dist[t[0]][t[1]] + 1
                     q.append((nr, nc))
-                elif dist[nr][nc] > dist[t[0]][t[1]] + 1 and cnt < 1:
+                elif cnt < 1:
                     dist[nr][nc] = dist[t[0]][t[1]] + 1
                     q.append((nr, nc))
                     o = 1
-                elif dist[nr][nc] > dist[t[0]][t[1]] + 1 and cnt >= 1:
+                elif cnt >= 1:
                     q.append((nr, nc))
         if o == 1:
             cnt += 1
