@@ -42,5 +42,68 @@
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-17주차 
+17주차 3055 탈출
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+# import sys
+# from collections import deque
+#
+#
+# def find(arr):
+#     dir = [[-1, 0], [1, 0], [0, -1], [0, 1]]
+#     dist = [[False for i in range(c)] for j in range(r)]
+#     sonic = deque()
+#     water = deque()
+#     count = 0
+#
+#     for i in range(r):
+#         for j in range(c):
+#             if arr[i][j] == '*':
+#                 water.append((i, j))
+#                 dist[i][j] = True
+#             elif arr[i][j] == 'S':
+#                 sonic.append((i, j))
+#                 dist[i][j] = True
+#             elif arr[i][j] == 'X':
+#                 dist[i][j] = True
+#
+#     while sonic:
+#         for i in range(len(water)):
+#             wx, wy = water.popleft()
+#             for j in range(4):
+#                 nx = wx + dir[j][0]
+#                 ny = wy + dir[j][1]
+#                 if (0 <= nx) and (nx < r) and (0 <= ny) and (ny < c):
+#                     if arr[nx][ny] == '.':
+#                         water.append((nx, ny))
+#                         arr[nx][ny] = '*'
+#                         dist[nx][ny] = True
+#
+#         count += 1
+#
+#         for i in range(len(sonic)):
+#             sx, sy = sonic.popleft()
+#             for j in range(4):
+#                 nx = sx + dir[j][0]
+#                 ny = sy + dir[j][1]
+#                 if (0 <= nx) and (nx < r) and (0 <= ny) and (ny < c):
+#                     if arr[nx][ny] == '.' and dist[nx][ny] == False:
+#                         sonic.append((nx, ny))
+#                         dist[nx][ny] = True
+#                     elif arr[nx][ny] == 'D':
+#                         return count
+#
+#     return -1
+#
+#
+# r, c = map(int, sys.stdin.readline().split())
+# nl = []
+#
+# for i in range(r):
+#     nl.append(list(sys.stdin.readline().rstrip()))
+#
+# o = find(nl)
+#
+# if o == -1:
+#     print("KAKTUS")
+# else:
+#     print(o)
