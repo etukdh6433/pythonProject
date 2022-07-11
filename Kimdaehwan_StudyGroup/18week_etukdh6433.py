@@ -1,52 +1,52 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-18주차 1260 DFS와 BFS (오답)
+18주차 1260 DFS와 BFS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 # import sys
 #
 #
 # def dfs(s):
-#     nl = [s]
-#     while graph_d[s] != [0 for _ in range(n + 1)]:
-#         i = graph_d[s].index(1)
-#         if graph_d[s][i] == 1 or graph_d[i][s] == 1:
-#             graph_d[s][i] = 0
-#             graph_d[i][s] = 0
-#             s = i
-#             if s not in nl:
-#                 nl.append(s)
+#     nl = []
+#     l = [s]
+#
+#     while l:
+#         s = l.pop()
+#         if s not in nl:
+#             nl.append(s)
+#             l.extend(graphd[s])
+#
 #     print(*nl)
-#     return
 #
 #
 # def bfs(s):
 #     ml = [s]
-#     j = 0
-#     while graph_b[s] != [0 for _ in range(n + 1)]:
-#         i = graph_b[s].index(1)
-#         if graph_b[s][i] == 1 or graph_b[i][s] == 1:
-#             graph_b[s][i] = 0
-#             graph_b[i][s] = 0
-#             if i not in ml:
-#                 ml.append(i)
-#         if graph_b[s] == [0 for i in range(n + 1)]:
-#             j += 1
-#             s = j
+#     q = graphb[s].copy()
+#
+#     while q:
+#         s = q.pop(0)
+#         if s not in ml:
+#             ml.append(s)
+#             q.extend(graphb[s])
+#
 #     print(*ml)
-#     return
 #
 #
 # n, m, v = map(int, sys.stdin.readline().split())
-# graph_d = [[0 for _ in range(n + 1)] for _ in range(n + 1)]
-# graph_b = [[0 for _ in range(n + 1)] for _ in range(n + 1)]
+# graphd = [[] for _ in range(n + 1)]
+# graphb = [[] for _ in range(n + 1)]
 #
 # for _ in range(m):
 #     a, b = map(int, sys.stdin.readline().split())
 #
-#     graph_d[a][b] = 1
-#     graph_d[b][a] = 1
+#     graphd[a].append(b); graphd[b].append(a)
+#     graphd[a].sort(reverse=True); graphd[b].sort(reverse=True)
 #
-#     graph_b[a][b] = 1
-#     graph_b[b][a] = 1
+#     graphb[a].append(b); graphb[b].append(a)
+#     graphb[a].sort(); graphb[b].sort()
 #
 # dfs(v)
 # bfs(v)
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+18주차 14503 로봇 청소기
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
