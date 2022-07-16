@@ -85,5 +85,39 @@
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-18주차 24479 알고리즘 수업 - 넓이 우선 탐색
+18주차 24444 알고리즘 수업 - 넓이 우선 탐색
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+# import sys
+# from collections import deque
+# sys.setrecursionlimit(10**6)
+
+
+# def bfs(V, E, r, o):
+#     V[r] = o
+#     q = deque([r])
+#     while q:
+#         u = q.popleft()
+#         for i in E[u]:
+#             if V[i] == 0:
+#                 o += 1
+#                 V[i] = o
+#                 q.append(i)
+
+
+# n, m, r = map(int, sys.stdin.readline().split())
+# V = [0 for _ in range(n + 1)]
+# E = [[] for _ in range(n + 1)]
+
+# for _ in range(m):
+#     a, b = map(int, sys.stdin.readline().split())
+#     E[a].append(b)
+#     E[b].append(a)
+
+# for i in range(1, n + 1):
+#     E[i].sort()
+
+# order = 1
+# bfs(V, E, r, order)
+
+# for i in range(1, n + 1):
+#     print(V[i])
