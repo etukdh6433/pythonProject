@@ -34,5 +34,36 @@
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-18주차 9934 완전 이진 트리
+19주차 9934 완전 이진 트리
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+# import sys
+# sys.setrecursionlimit(10**6)
+#
+#
+# def cbt(arr, level):
+#     mid = len(arr)//2
+#     val = arr[mid]
+#
+#     if val not in graph[level]:
+#         graph[level].append(val)
+#
+#     if len(arr) == 1:
+#         return
+#
+#     cbt(arr[0:mid], level + 1)
+#     cbt(arr[mid + 1:len(arr)], level + 1)
+#
+#
+# k = int(sys.stdin.readline())
+# order = list(map(int, sys.stdin.readline().split()))
+# graph = [[] for _ in range(k)]
+#
+# cbt(order, 0)
+#
+# for i in range(k):
+#     print(*graph[i])
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+19주차 1991 트리순회
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
