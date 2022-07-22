@@ -67,3 +67,68 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 19주차 1991 트리순회
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+# import sys
+# sys.setrecursionlimit(10**6)
+#
+#
+# n = int(sys.stdin.readline())
+# graph = [[] for _ in range(n)]
+# preorder = []
+# inorder = []
+# postorder = []
+#
+# for _ in range(n):
+#     ro, le, ri = sys.stdin.readline().split()
+#     ron = ord(ro)
+#
+#     graph[ron-65].append(ro)
+#     graph[ron-65].append(le)
+#     graph[ron-65].append(ri)
+#
+#
+# def pre_order(grr, s=0):
+#     preorder.append(grr[s][0])
+#
+#     if grr[s][1] != '.':
+#         pre_order(grr, ord(grr[s][1]) - 65)
+#
+#     if grr[s][2] != '.':
+#         pre_order(grr, ord(grr[s][2]) - 65)
+#
+#     return
+#
+#
+# pre_order(graph)
+# print(*preorder, sep='')
+#
+#
+# def in_order(grr, s=0):
+#     if grr[s][1] != '.':
+#         in_order(grr, ord(grr[s][1]) - 65)
+#
+#     inorder.append(grr[s][0])
+#
+#     if grr[s][2] != '.':
+#         in_order(grr, ord(grr[s][2]) - 65)
+#
+#     return
+#
+#
+# in_order(graph)
+# print(*inorder, sep='')
+#
+#
+# def post_order(grr, s=0):
+#     if grr[s][1] != '.':
+#         post_order(grr, ord(grr[s][1]) - 65)
+#
+#     if grr[s][2] != '.':
+#         post_order(grr, ord(grr[s][2]) - 65)
+#
+#     postorder.append(grr[s][0])
+#
+#     return
+#
+#
+# post_order(graph)
+# print(*postorder, sep='')
