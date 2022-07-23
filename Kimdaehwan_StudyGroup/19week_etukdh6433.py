@@ -44,8 +44,7 @@
 #     mid = len(arr)//2
 #     val = arr[mid]
 #
-#     if val not in graph[level]:
-#         graph[level].append(val)
+#     graph[level].append(val)
 #
 #     if len(arr) == 1:
 #         return
